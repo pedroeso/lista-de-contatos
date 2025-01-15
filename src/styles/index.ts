@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import variaveis from './variaveis'
+import { Botao } from '../components/FiltroCard/Tarefa/styles'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -25,6 +27,19 @@ export const Titulo = styled.h2`
   margin-bottom: 40px;
   font-size: 18px;
   font-weight: bold;
+`
+export const Campo = styled.input`
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666666;
+  border-color: #666666;
+  width: 100%;
+`
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
 `
 
 export default EstiloGlobal
