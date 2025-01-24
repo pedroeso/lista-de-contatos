@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
 import FiltroCard from '../../components/FiltroCard'
 import { alternaTermo } from '../../store/reducers/filtro'
 
 import * as S from './styles'
 import * as enums from '../../utils/enums/Tarefa'
-import { Campo } from '../../styles'
+import { Botao, Campo } from '../../styles'
 import { RootReducer } from '../../store'
 
 type Props = {
@@ -12,6 +14,7 @@ type Props = {
 }
 
 const BarraLateral = ({ mostrarFiltros }: Props) => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
@@ -56,7 +59,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
             </S.Filtros>
           </>
         ) : (
-          <button type="button">Voltar a lista de tarefas</button>
+          <Botao onClick={() => navigate('/')}>Voltar a lista de tarefas</Botao>
         )}
       </div>
     </S.Aside>
