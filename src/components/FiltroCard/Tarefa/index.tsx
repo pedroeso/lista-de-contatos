@@ -13,6 +13,7 @@ type Props = TarefaClass
 
 const Tarefa = ({
   descricao: descricaoOriginal,
+  email: emailOriginal,
   prioridade,
   status,
   titulo,
@@ -21,6 +22,7 @@ const Tarefa = ({
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [descricao, setDescricao] = useState('')
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
     if (descricaoOriginal.length > 0) {
@@ -28,9 +30,16 @@ const Tarefa = ({
     }
   }, [descricaoOriginal])
 
+  useEffect(() => {
+    if (emailOriginal.length > 0) {
+      setEmail(emailOriginal)
+    }
+  }, [emailOriginal])
+
   function cancelarEdicao() {
     setEstaEditando(false)
     setDescricao(descricaoOriginal)
+    setEmail(emailOriginal)
   }
 
   function alteraStatusTarefa(evento: ChangeEvent<HTMLInputElement>) {
@@ -68,6 +77,11 @@ const Tarefa = ({
         value={descricao}
         onChange={(evento) => setDescricao(evento.target.value)}
       />
+      <S.Email
+        disabled={!estaEditando}
+        value={email}
+        onChange={(evento) => setEmail(evento.target.value)}
+      />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
@@ -76,6 +90,7 @@ const Tarefa = ({
                 dispatch(
                   editar({
                     descricao,
+                    email,
                     prioridade,
                     status,
                     titulo,

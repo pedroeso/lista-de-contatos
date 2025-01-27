@@ -14,6 +14,7 @@ const Formulario = () => {
 
   const [titulo, setTitulo] = useState('')
   const [descricao, setdescricao] = useState('')
+  const [email, setEmail] = useState('')
   const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL)
 
   const cadastrarTarefa = (evento: FormEvent) => {
@@ -24,6 +25,7 @@ const Formulario = () => {
         titulo,
         prioridade,
         descricao,
+        email,
         status: enums.Status.PENDENTE
       })
     )
