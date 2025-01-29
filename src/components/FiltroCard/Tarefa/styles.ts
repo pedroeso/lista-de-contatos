@@ -12,7 +12,6 @@ type TagProps = {
 
 function retornaCorDeFundo(props: TagProps): string {
   if (props.parametro === 'prioridade') {
-    if (props.prioridade === enums.Prioridade.URGENTE) return variaveis.vermelho
     if (props.prioridade === enums.Prioridade.IMPORTANTE)
       return variaveis.amarelo2
   } else {

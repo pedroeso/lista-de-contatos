@@ -2,7 +2,14 @@ import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { BotaoSalvar, Campo, MainContainer, Titulo } from '../../styles'
+import {
+  BotaoSalvar,
+  Campo,
+  Dois,
+  Tres,
+  MainContainer,
+  Titulo
+} from '../../styles'
 import { Form, Opcoes, Opcao } from './styles'
 import * as enums from '../../utils/enums/Tarefa'
 
@@ -40,13 +47,19 @@ const Formulario = () => {
           value={titulo}
           onChange={(evento) => setTitulo(evento.target.value)}
           type="text"
-          placeholder="Título"
+          placeholder="Nome completo"
         />
-        <Campo
+        <Dois
           value={descricao}
           onChange={({ target }) => setdescricao(target.value)}
-          as="textarea"
-          placeholder="Descrição da tarefa"
+          type="text"
+          placeholder="Email"
+        />
+        <Tres
+          value={email}
+          onChange={({ target }) => setEmail(target.value)}
+          type="text"
+          placeholder="Telefone"
         />
         <Opcoes>
           <p>Prioridade</p>

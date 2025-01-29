@@ -10,11 +10,11 @@ const initialState: TarefasState = {
   itens: [
     {
       id: 1,
-      descricao: 'Estudar Javascript revendo o exercício do módulo 7',
+      descricao: '(00)00000-0000',
       email: 'exemplo@gmail.com',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
-      titulo: 'Estudar JavaScript'
+      titulo: 'Exemplo'
     }
   ]
 }

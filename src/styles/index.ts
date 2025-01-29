@@ -36,6 +36,28 @@ export const Campo = styled.input`
   border-color: #666666;
   width: 100%;
 `
+export const Dois = styled.input`
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666666;
+  border-color: #666666;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`
+
+export const Tres = styled.input`
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666666;
+  border-color: #666666;
+  width: 100%;
+  margin-bottom: 20px;
+`
 
 export const Botao = styled.button`
   font-weight: bold;

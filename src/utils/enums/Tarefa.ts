@@ -1,10 +1,9 @@
 export enum Prioridade {
-  URGENTE = 'urgente',
-  IMPORTANTE = 'importante',
+  IMPORTANTE = 'Favorito',
   NORMAL = 'normal'
 }
 
 export enum Status {
-  PENDENTE = 'pendente',
-  CONCLUIDA = 'concluída'
+  PENDENTE = 'normal',
+  CONCLUIDA = 'favoritos'
 }
