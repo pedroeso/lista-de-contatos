@@ -44,7 +44,9 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
             </S.Filtros>
           </>
         ) : (
-          <Botao onClick={() => navigate('/')}>Voltar a lista de tarefas</Botao>
+          <Botao onClick={() => navigate('/')}>
+            Voltar a lista de contatos
+          </Botao>
         )}
       </div>
     </S.Aside>
