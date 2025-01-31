@@ -10,8 +10,8 @@ const initialState: TarefasState = {
   itens: [
     {
       id: 1,
-      descricao: '(00)00000-0000',
       email: 'exemplo@gmail.com',
+      descricao: '(00)00000-0000',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
       titulo: 'Exemplo'

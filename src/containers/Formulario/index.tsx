@@ -39,6 +39,15 @@ const Formulario = () => {
     navigate('/')
   }
 
+  function formatarNumero(numero: string) {
+    const apenasNumeros = numero.replace(/\D/g, '') // Remove caracteres não numéricos
+    if (apenasNumeros.length <= 10) {
+      return apenasNumeros.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3')
+    } else {
+      return apenasNumeros.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3')
+    }
+  }
+
   return (
     <MainContainer>
       <Titulo>Nova tarefa</Titulo>
@@ -50,14 +59,14 @@ const Formulario = () => {
           placeholder="Nome completo"
         />
         <Dois
-          value={descricao}
-          onChange={({ target }) => setdescricao(target.value)}
-          type="text"
+          value={email}
+          onChange={({ target }) => setEmail(target.value)}
+          type="email"
           placeholder="Email"
         />
         <Tres
-          value={email}
-          onChange={({ target }) => setEmail(target.value)}
+          value={formatarNumero(descricao)}
+          onChange={({ target }) => setdescricao(target.value)}
           type="text"
           placeholder="Telefone"
         />
