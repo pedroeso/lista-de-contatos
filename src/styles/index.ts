@@ -76,4 +76,9 @@ export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
 `
 
+export const Lista = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export default EstiloGlobal

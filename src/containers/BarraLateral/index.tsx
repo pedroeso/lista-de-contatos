@@ -6,8 +6,9 @@ import { alternaTermo } from '../../store/reducers/filtro'
 
 import * as S from './styles'
 import * as enums from '../../utils/enums/Tarefa'
-import { Botao, Campo } from '../../styles'
+import { Botao, Campo, Lista } from '../../styles'
 import { RootReducer } from '../../store'
+import agendaIcon from '../../../src/containers/BarraLateral/agenda.svg'
 
 type Props = {
   mostrarFiltros: boolean
@@ -20,6 +21,22 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
 
   return (
     <S.Aside>
+      <Lista>
+        <img
+          style={{ marginRight: '15px', marginBottom: '15px' }}
+          src={agendaIcon}
+          alt="Agenda Icon"
+        />
+        <h2
+          style={{
+            fontFamily: 'Just Another Hand, serif',
+            fontWeight: 400,
+            fontStyle: 'normal'
+          }}
+        >
+          Lista de Contatos
+        </h2>
+      </Lista>
       <div>
         {mostrarFiltros ? (
           <>
