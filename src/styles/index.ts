@@ -19,6 +19,7 @@ export const MainContainer = styled.main`
   padding: 0 40px;
   height: 100vh;
   overflow-y: scroll;
+  background-color: #ecf0f1;
 `
 export const Titulo = styled.h2`
   display: block;

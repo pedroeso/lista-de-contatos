@@ -50,7 +50,7 @@ const Formulario = () => {
 
   return (
     <MainContainer>
-      <Titulo>Nova tarefa</Titulo>
+      <Titulo>Novo contato</Titulo>
       <Form onSubmit={cadastrarTarefa}>
         <Campo
           value={titulo}

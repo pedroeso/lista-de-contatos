@@ -4,16 +4,17 @@ import variaveis from '../../styles/variaveis'
 
 export const Circulo = styled(Link)`
   display: flex;
-  height: 64px;
-  width: 64px;
   background-color: ${variaveis.verde};
   color: #fff;
   position: fixed;
   bottom: 40px;
-  right: 40px;
-  border-radius: 50%;
+  left: 20px;
+  border-radius: 15px;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 14px;
   text-decoration: none;
+  padding: 8px 12;
+  width: 172px;
+  height: 32px;
 `
